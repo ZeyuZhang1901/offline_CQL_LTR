@@ -1,0 +1,26 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-07-19T03:22:18.431562",
+    "startedAt": "2022-07-19T03:22:18.368032",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "--logging.output_dir",
+        "./experiment_output"
+    ],
+    "state": "running",
+    "program": "-m SimpleSAC.offline_LTR",
+    "git": {
+        "remote": null,
+        "commit": "81bbfed1d856a4839f533f7ef475b1b33bacb94a"
+    },
+    "email": "zeyuzhang769@gmail.com",
+    "root": "E:/VScode/VScode_python/Offline_CQL_LTR",
+    "host": "LAPTOP-N81LOE53",
+    "username": "Lenovo",
+    "executable": "E:\\Anaconda\\envs\\SimpleSAC\\python.exe"
+}

@@ -1,0 +1,74 @@
+2022-07-19 11:22:18,370 INFO    MainThread:46304 [wandb_setup.py:_flush():76] Loading settings from C:\Users\Lenovo\.config\wandb\settings
+2022-07-19 11:22:18,370 INFO    MainThread:46304 [wandb_setup.py:_flush():76] Loading settings from E:\VScode\VScode_python\Offline_CQL_LTR\wandb\settings
+2022-07-19 11:22:18,371 INFO    MainThread:46304 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-07-19 11:22:18,371 WARNING MainThread:46304 [wandb_setup.py:_flush():76] Could not find program at -m SimpleSAC.offline_LTR
+2022-07-19 11:22:18,371 INFO    MainThread:46304 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m SimpleSAC.offline_LTR'}
+2022-07-19 11:22:18,371 INFO    MainThread:46304 [wandb_init.py:_log_setup():428] Logging user logs to ./experiment_output\7128548fd2474483beb69e9ea767615d\wandb\offline-run-20220719_112218-7128548fd2474483beb69e9ea767615d\logs\debug.log
+2022-07-19 11:22:18,371 INFO    MainThread:46304 [wandb_init.py:_log_setup():429] Logging internal logs to ./experiment_output\7128548fd2474483beb69e9ea767615d\wandb\offline-run-20220719_112218-7128548fd2474483beb69e9ea767615d\logs\debug-internal.log
+2022-07-19 11:22:18,372 INFO    MainThread:46304 [wandb_init.py:init():462] calling init triggers
+2022-07-19 11:22:18,372 INFO    MainThread:46304 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'max_traj_length': 10, 'replay_buffer_size': 1000000, 'seed': 42, 'device': 'cuda', 'save_model': True, 'policy_arch': '256-256', 'qf_arch': '256-256', 'orthogonal_init': False, 'policy_log_std_multiplier': 1.0, 'policy_log_std_offset': -1.0, 'n_epochs': 2000, 'bc_epochs': 0, 'n_env_steps_per_epoch': 1000, 'n_train_step_per_epoch': 1000, 'eval_period': 10, 'eval_n_trajs': 5, 'batch_size': 256, 'doc_feature_size': 46, 'online_lr': 0.001, 'online_eta': 1, 'online_num_iteration': 10000, 'click_model': 'informational', 'reward_method': 'both', 'cql.alpha_multiplier': 1.0, 'cql.backup_entropy': False, 'cql.cql_clip_diff_max': inf, 'cql.cql_clip_diff_min': -inf, 'cql.cql_importance_sample': True, 'cql.cql_lagrange': False, 'cql.cql_max_target_backup': False, 'cql.cql_min_q_weight': 5.0, 'cql.cql_n_actions': 10, 'cql.cql_target_action_gap': 1.0, 'cql.cql_temp': 1.0, 'cql.discount': 0.99, 'cql.optimizer_type': 'adam', 'cql.policy_lr': 0.0003, 'cql.qf_lr': 0.0003, 'cql.soft_target_update_rate': 0.005, 'cql.target_entropy': 0.0, 'cql.target_update_period': 1, 'cql.use_automatic_entropy_tuning': True, 'cql.use_cql': True, 'logging.anonymous': None, 'logging.experiment_id': None, 'logging.notes': None, 'logging.online': False, 'logging.output_dir': './experiment_output', 'logging.prefix': 'SimpleSAC', 'logging.project': 'sac', 'logging.random_delay': 0.0, 'hostname': 'LAPTOP-N81LOE53'}
+2022-07-19 11:22:18,372 INFO    MainThread:46304 [wandb_init.py:init():515] starting backend
+2022-07-19 11:22:18,375 INFO    MainThread:46304 [backend.py:ensure_launched():217] starting backend process...
+2022-07-19 11:22:18,375 INFO    MainThread:46304 [backend.py:ensure_launched():222] started backend process with pid: 0
+2022-07-19 11:22:18,375 INFO    BackendThr:46304 [internal.py:wandb_internal():90] W&B internal server running at pid: 46304, started at: 2022-07-19 11:22:18.375014
+2022-07-19 11:22:18,376 INFO    MainThread:46304 [wandb_init.py:init():525] backend started and connected
+2022-07-19 11:22:18,378 INFO    MainThread:46304 [wandb_init.py:init():596] updated telemetry
+2022-07-19 11:22:18,379 INFO    WriterThread:46304 [datastore.py:open_for_write():75] open: ./experiment_output\7128548fd2474483beb69e9ea767615d\wandb\offline-run-20220719_112218-7128548fd2474483beb69e9ea767615d\run-7128548fd2474483beb69e9ea767615d.wandb
+2022-07-19 11:22:18,428 INFO    MainThread:46304 [wandb_init.py:init():662] starting run threads in backend
+2022-07-19 11:22:23,442 INFO    MainThread:46304 [wandb_run.py:_console_start():1898] atexit reg
+2022-07-19 11:22:23,443 INFO    MainThread:46304 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-07-19 11:22:23,443 INFO    MainThread:46304 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-07-19 11:22:23,444 INFO    MainThread:46304 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-07-19 11:22:23,445 INFO    MainThread:46304 [wandb_init.py:init():688] run started, returning control to user process
+2022-07-19 23:55:25,718 INFO    MainThread:46304 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-07-19 23:55:25,721 INFO    MainThread:46304 [wandb_run.py:_restore():1839] restore
+2022-07-19 23:55:31,235 INFO    SenderThread:46304 [sender.py:send_exit():371] handling exit code: 0
+2022-07-19 23:55:31,236 INFO    SenderThread:46304 [sender.py:send_exit():373] handling runtime: 45192
+2022-07-19 23:55:31,237 INFO    SenderThread:46304 [sender.py:_save_file():949] saving file wandb-summary.json with policy end
+2022-07-19 23:55:31,237 INFO    SenderThread:46304 [sender.py:send_exit():379] send defer
+2022-07-19 23:55:31,243 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 0
+2022-07-19 23:55:31,245 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-07-19 23:55:31,245 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 1
+2022-07-19 23:55:31,247 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 1
+2022-07-19 23:55:31,249 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-07-19 23:55:31,249 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 2
+2022-07-19 23:55:31,249 INFO    MainThread:46304 [wandb_run.py:_on_finish():1996] got exit ret: 
+2022-07-19 23:55:31,250 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 2
+2022-07-19 23:55:31,250 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-07-19 23:55:31,250 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 3
+2022-07-19 23:55:31,251 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 3
+2022-07-19 23:55:31,251 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-07-19 23:55:31,251 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 4
+2022-07-19 23:55:31,251 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 4
+2022-07-19 23:55:31,252 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-07-19 23:55:31,252 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 5
+2022-07-19 23:55:31,252 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 5
+2022-07-19 23:55:31,253 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-07-19 23:55:31,253 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 6
+2022-07-19 23:55:31,253 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 6
+2022-07-19 23:55:31,254 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-07-19 23:55:31,254 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 7
+2022-07-19 23:55:31,254 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 7
+2022-07-19 23:55:31,255 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-07-19 23:55:31,255 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 8
+2022-07-19 23:55:31,255 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 8
+2022-07-19 23:55:31,255 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-07-19 23:55:31,255 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 9
+2022-07-19 23:55:31,256 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 9
+2022-07-19 23:55:31,256 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-07-19 23:55:31,256 INFO    SenderThread:46304 [sender.py:transition_state():392] send defer: 10
+2022-07-19 23:55:31,257 INFO    HandlerThread:46304 [handler.py:handle_request_defer():164] handle defer: 10
+2022-07-19 23:55:31,257 INFO    SenderThread:46304 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-07-19 23:55:31,371 INFO    MainThread:46304 [wandb_run.py:_on_finish():1996] got exit ret: done: true
+exit_result {
+}
+local_info {
+}
+
+2022-07-19 23:55:31,499 INFO    HandlerThread:46304 [handler.py:finish():806] shutting down handler
+2022-07-19 23:55:32,259 INFO    WriterThread:46304 [datastore.py:close():279] close: ./experiment_output\7128548fd2474483beb69e9ea767615d\wandb\offline-run-20220719_112218-7128548fd2474483beb69e9ea767615d\run-7128548fd2474483beb69e9ea767615d.wandb
+2022-07-19 23:55:32,370 INFO    SenderThread:46304 [sender.py:finish():1111] shutting down sender
+2022-07-19 23:55:32,511 INFO    MainThread:46304 [wandb_run.py:_footer_history_summary_info():3104] rendering history
+2022-07-19 23:55:32,521 INFO    MainThread:46304 [wandb_run.py:_footer_history_summary_info():3136] rendering summary
+2022-07-19 23:55:32,548 INFO    MainThread:46304 [internal.py:handle_exit():80] Internal process exited
