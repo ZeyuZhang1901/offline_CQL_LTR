@@ -46,7 +46,7 @@ FLAGS_DEF = define_flags_with_default(
 
     n_epochs=2000,
     bc_epochs=0,
-    n_env_steps_per_epoch=1000,
+    n_total_sample=1000000,    # num of total samples  
     n_train_step_per_epoch=1000,
     eval_period=10,
     eval_n_trajs=5,
@@ -84,13 +84,12 @@ def offline_train(argv):
     print("Online training start!")
     offlinedatapath = "./offlinedata.txt"
     doc_len, dataset, clicks_dataset = Pretrain(FLAGS)
-    OfflineDataDisplay(clicks_dataset, offlinedatapath)
+    # OfflineDataDisplay(clicks_dataset, offlinedatapath)
     print("Offline data prepared! Details in "+offlinedatapath+"\n")
     print("Online training finish!\n")
 
     '''offline train start'''
     print("***************************************************************")
-    print("Offline training Start!\n")
     set_random_seed(FLAGS.seed)
 
     train_sampler = StepSampler(doc_len, dataset, clicks_dataset, FLAGS.max_traj_length)
@@ -131,16 +130,30 @@ def offline_train(argv):
 
     sampler_policy = SamplerPolicy(policy, FLAGS.device)
 
+    '''prepare click dataset'''
+    print("Prepare click dataset in replay buffer:\n")
+    print("Initial parameters in policy: ")
+    print(policy.parameters())
+    print("\n")
+    train_sampler.sample(
+        sampler_policy, FLAGS.n_total_sample,
+        deterministic=False, replay_buffer=replay_buffer
+    )
+    print("Click dataset prepared!\n")
+    print("Offline training Start!\n")
+
     viskit_metrics = {}
     for epoch in range(FLAGS.n_epochs):
         metrics = {}
-        with Timer() as rollout_timer:
-            train_sampler.sample(
-                sampler_policy, FLAGS.n_env_steps_per_epoch,
-                deterministic=False, replay_buffer=replay_buffer
-            )
-            metrics['env_steps'] = replay_buffer.total_steps
-            metrics['epoch'] = epoch
+        # with Timer() as rollout_timer:
+        #     train_sampler.sample(
+        #         sampler_policy, FLAGS.n_env_steps_per_epoch,
+        #         deterministic=False, replay_buffer=replay_buffer
+        #     )
+        #     metrics['env_steps'] = replay_buffer.total_steps
+        #     metrics['epoch'] = epoch
+        metrics['env_steps'] = replay_buffer.total_steps
+        metrics['epoch'] = epoch
 
         with Timer() as train_timer:
             for batch_idx in range(FLAGS.n_train_step_per_epoch):
@@ -165,10 +178,9 @@ def offline_train(argv):
                     save_data = {'sac': sac, 'variant': variant, 'epoch': epoch}
                     wandb_logger.save_pickle(save_data, 'model.pkl')
 
-        metrics['rollout_time'] = rollout_timer()
         metrics['train_time'] = train_timer()
         metrics['eval_time'] = eval_timer()
-        metrics['epoch_time'] = rollout_timer() + train_timer() + eval_timer()
+        metrics['epoch_time'] = train_timer() + eval_timer()
         wandb_logger.log(metrics)
         viskit_metrics.update(metrics)
         logger.record_dict(metrics)

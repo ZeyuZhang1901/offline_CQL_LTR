@@ -1,0 +1,187 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.20
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.13
+    start_time: 1658321748
+    t:
+      1:
+      - 1
+      - 2
+      - 3
+      - 55
+      2:
+      - 1
+      - 2
+      - 3
+      - 55
+      3:
+      - 4
+      - 14
+      - 16
+      4: 3.8.13
+      5: 0.12.20
+      8:
+      - 3
+      - 8
+batch_size:
+  desc: null
+  value: 256
+bc_epochs:
+  desc: null
+  value: 0
+click_model:
+  desc: null
+  value: informational
+cql.alpha_multiplier:
+  desc: null
+  value: 1.0
+cql.backup_entropy:
+  desc: null
+  value: false
+cql.cql_clip_diff_max:
+  desc: null
+  value: .inf
+cql.cql_clip_diff_min:
+  desc: null
+  value: -.inf
+cql.cql_importance_sample:
+  desc: null
+  value: true
+cql.cql_lagrange:
+  desc: null
+  value: false
+cql.cql_max_target_backup:
+  desc: null
+  value: false
+cql.cql_min_q_weight:
+  desc: null
+  value: 5.0
+cql.cql_n_actions:
+  desc: null
+  value: 10
+cql.cql_target_action_gap:
+  desc: null
+  value: 1.0
+cql.cql_temp:
+  desc: null
+  value: 1.0
+cql.discount:
+  desc: null
+  value: 0.99
+cql.optimizer_type:
+  desc: null
+  value: adam
+cql.policy_lr:
+  desc: null
+  value: 0.0003
+cql.qf_lr:
+  desc: null
+  value: 0.0003
+cql.soft_target_update_rate:
+  desc: null
+  value: 0.005
+cql.target_entropy:
+  desc: null
+  value: 0.0
+cql.target_update_period:
+  desc: null
+  value: 1
+cql.use_automatic_entropy_tuning:
+  desc: null
+  value: true
+cql.use_cql:
+  desc: null
+  value: true
+device:
+  desc: null
+  value: cuda
+doc_feature_size:
+  desc: null
+  value: 46
+eval_n_trajs:
+  desc: null
+  value: 5
+eval_period:
+  desc: null
+  value: 10
+hostname:
+  desc: null
+  value: LAPTOP-N81LOE53
+logging.anonymous:
+  desc: null
+  value: null
+logging.experiment_id:
+  desc: null
+  value: null
+logging.notes:
+  desc: null
+  value: null
+logging.online:
+  desc: null
+  value: false
+logging.output_dir:
+  desc: null
+  value: ./experiment_output_no_rollout
+logging.prefix:
+  desc: null
+  value: SimpleSAC
+logging.project:
+  desc: null
+  value: sac
+logging.random_delay:
+  desc: null
+  value: 0.0
+max_traj_length:
+  desc: null
+  value: 10
+n_epochs:
+  desc: null
+  value: 2000
+n_total_sample:
+  desc: null
+  value: 1000000
+n_train_step_per_epoch:
+  desc: null
+  value: 1000
+online_eta:
+  desc: null
+  value: 1
+online_lr:
+  desc: null
+  value: 0.001
+online_num_iteration:
+  desc: null
+  value: 10000
+orthogonal_init:
+  desc: null
+  value: false
+policy_arch:
+  desc: null
+  value: 256-256
+policy_log_std_multiplier:
+  desc: null
+  value: 1.0
+policy_log_std_offset:
+  desc: null
+  value: -1.0
+qf_arch:
+  desc: null
+  value: 256-256
+replay_buffer_size:
+  desc: null
+  value: 1000000
+reward_method:
+  desc: null
+  value: both
+save_model:
+  desc: null
+  value: true
+seed:
+  desc: null
+  value: 42
